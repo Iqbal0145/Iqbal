@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Registrasi</title>
+    <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+    <div class="container" id="form-container">
+        <form id="login-form">
+            <h2>Login</h2>
+            <div class="form-group">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" placeholder="Masukkan email" required>
+            </div>
+            <div class="form-group">
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" placeholder="Masukkan password" required>
+            </div>
+            <button type="submit">Login</button>
+            <div class="toggle">
+                Belum punya akun? <a href="#" onclick="toggleForm()">Daftar di sini</a>
+            </div>
+        </form>
+        <form id="register-form" style="display: none;">
+            <h2>Registrasi</h2>
+            <div class="form-group">
+                <label for="register-name">Nama:</label>
+                <input type="text" id="register-name" placeholder="Masukkan nama" required>
+            </div>
+            <div class="form-group">
+                <label for="register-email">Email:</label>
+                <input type="email" id="register-email" placeholder="Masukkan email" required>
+            </div>
+            <div class="form-group">
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" placeholder="Masukkan password" required>
+            </div>
+            <button type="submit">Daftar</button>
+            <div class="toggle">
+                Sudah punya akun? <a href="#" onclick="toggleForm()">Login di sini</a>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function toggleForm() {
+            const loginForm = document.getElementById('login-form');
+            const registerForm = document.getElementById('register-form');
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+                registerForm.style.display = 'none';
+            } else {
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
